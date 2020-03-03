@@ -32,8 +32,8 @@ function _extractRegularKeys(string) {
  * @param {String} [config.preventDefault] - Should it prevent the default key behaviour
  * @param {String} [config.eventType] - Event type. Default: keydown
  */
-export default function useKey(key, handler, config) {
-    config = { ..._defaultConfig, ...(config || {}) };
+export function useKey(key, handler, config = {}) {
+    config = { ..._defaultConfig, ...config };
     const memoHandler = useCallback(handler);
 
     const internalHandler = e => {
@@ -63,7 +63,7 @@ export default function useKey(key, handler, config) {
         }
         memoHandler(e);
     };
-
+    
     useEffect(() => {
         document.addEventListener(config.eventType, internalHandler);
         return () => document.removeEventListener(config.eventType, internalHandler);
