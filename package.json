@@ -1,6 +1,6 @@
 {
   "name": "react-use-key",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React hook for key binding and execute handler",
   "author": "wmattei",
   "license": "MIT",
@@ -8,6 +8,7 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
+  "keywords": ["react", "hook", "key", "binding", "keybinding", "keypress", "keydown", "keyup", "usekey"],
   "engines": {
     "node": ">=8",
     "npm": ">=5"
